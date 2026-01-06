@@ -1,0 +1,133 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Anton K documentation platform.
+---
+
+## Recent Releases
+
+Anton K releases updates regularly to enhance your documentation experience. You receive new features, performance improvements, and bug fixes with each version. Check this changelog to see what's new and plan your upgrades.
+
+<Callout kind="info">
+  Subscribe to the RSS feed at `/rss.xml` or follow `@anton_k_docs` on social platforms to get notified of new releases automatically.
+</Callout>
+
+<Update label="2024-10-15" description="v2.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for teams, allowing multiple users to edit MDX pages simultaneously.
+- Introduced customizable brand colors via the dashboard at `https://dashboard.example.com/settings/branding`.
+
+## Improvements
+
+- Enhanced MDX parsing speed by `>30%` for large documentation sites.
+- Updated component library with 20 new Lucide icons, including `brain` and `sparkles`.
+
+## Bug Fixes
+
+- Fixed parsing errors with nested code blocks using 4 backticks.
+- Resolved issues with special character escaping in `{API_KEY}` and `<Component>` references.
+
+</Update>
+
+<Update label="2024-09-20" description="v2.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Launched API endpoints for programmatic documentation management at `https://api.example.com/v2/docs`.
+- Added `<Video>` and `<Iframe>` components for richer media embeds.
+
+## Breaking Changes
+
+- Updated frontmatter parsing to require strict YAML—no blank lines allowed inside `---` blocks.
+- Changed default tabs behavior in `<CodeGroup>` to auto-detect languages.
+
+<CodeGroup tabs="JavaScript,Python">
+````javascript
+// Old syntax (deprecated)
+const apiKey = {API_KEY};
+
+// New syntax
+const apiKey = `YOUR_API_KEY`;
+````
+````python
+# Old syntax (deprecated)
+api_key = {API_KEY}
+
+# New syntax
+api_key = "YOUR_API_KEY"
+````
+</CodeGroup>
+
+## Bug Fixes
+
+- Corrected `<ParamField>` validation to enforce single location attributes (`path`, `query`, etc.).
+
+</Update>
+
+<Update label="2024-08-10" description="v1.5.0" tags={["bugfix", "security"]}>
+
+## Improvements
+
+- Optimized image loading with required `width` and `height` attributes to prevent layout shifts.
+
+## Bug Fixes
+
+- Patched potential XSS vulnerabilities in user-submitted Mermaid diagrams.
+- Fixed heading hierarchy enforcement—no more H1 (`#`) allowed in body content.
+
+## Security
+
+- Enforced fake placeholder usage in code examples (`YOUR_API_KEY`) to prevent GitHub push protection blocks.
+
+</Update>
+
+## Featured Highlights
+
+<Columns cols={3}>
+  <Card title="Real-time Collaboration" icon="users" href="#2024-10-15">
+    Edit docs with your team in real time.
+  </Card>
+  <Card title="API v2 Launch" icon="zap" href="#2024-09-20">
+    Manage docs programmatically.
+  </Card>
+  <Card title="Media Components" icon="video" href="#2024-09-20">
+    Embed videos and iframes easily.
+  </Card>
+</Columns>
+
+## Stay Updated
+
+Follow these steps to ensure you never miss an update.
+
+<Steps>
+  <Step title="Check Dashboard" icon="monitor">
+    Visit `https://dashboard.example.com/changelog` for the latest version status.
+  </Step>
+  <Step title="Upgrade" icon="download">
+    Run the update command in your project root:
+    
+````bash
+npm update anton-k-docs
+````
+  </Step>
+  <Step title="Review Changes" icon="book-open">
+    Scan this changelog and test key features in a staging environment.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="RSS" icon="rss">
+    Add `/rss.xml` to your feed reader for automatic notifications.
+  </Tab>
+  <Tab title="Email" icon="mail">
+    Sign up at `https://dashboard.example.com/notifications` for weekly summaries.
+  </Tab>
+  <Tab title="GitHub" icon="github">
+    Watch the repository for release tags and discussions.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Have feedback? Open an issue on GitHub or contact support via `https://dashboard.example.com/help`.
+</Callout>

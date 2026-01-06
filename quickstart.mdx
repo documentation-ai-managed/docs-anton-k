@@ -1,0 +1,125 @@
+---
+title: Quickstart Guide
+description: Get started with Anton K by setting up your account and creating your first documentation space in under 5 minutes.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+<Callout kind="info">
+
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- Optional: A GitHub account to import projects later
+
+</Callout>
+
+## Create Your Account
+
+Visit [https://antonk.com/signup](https://antonk.com/signup) to get started.
+
+<Tabs>
+  <Tab title="Email Signup" icon="mail">
+    Enter your email and create a password. Anton K sends a verification link—check your inbox and click to confirm.
+  </Tab>
+  <Tab title="Google OAuth" icon="apple">
+    Click "Sign up with Google" for instant access without a new password.
+  </Tab>
+</Tabs>
+
+Once logged in, you land on the dashboard at [https://dashboard.antonk.com](https://dashboard.antonk.com).
+
+## Set Up Your First Documentation Space
+
+Follow these steps to create a space and add content.
+
+<Steps>
+  <Step title="Create a New Space" icon="plus">
+    Click the **New Space** button in the top-right corner of your dashboard.
+
+    Enter a name like "My Project Docs" and select a brand color (e.g., `#3B82F6` for Anton K blue).
+
+    Click **Create Space**.
+  </Step>
+
+  <Step title="Add Your First Project" icon="git-branch">
+    Inside your new space, select **Add Project**.
+
+    Choose **Blank Project** for starters, or **Import from GitHub** if you have a repo ready.
+
+    Name it "Quickstart Project" and save.
+  </Step>
+
+  <Step title="Create Your First Page" icon="file-text">
+    Navigate to your project and click **New Page**.
+
+    Title it "Introduction" and use the MDX editor to add content.
+
+    Here's a starter example:
+    
+````mdx
+```javascript
+console.log("Welcome to Anton K!");
+```
+````
+  </Step>
+
+  <Step title="Publish and Preview" icon="eye">
+    Click **Publish** to make your page live.
+
+    Use the preview pane to verify rendering, including code blocks and components.
+  </Step>
+</Steps>
+
+<Callout kind="tip" kind="success">
+  Your first page is now live! Share the URL from the address bar with your team.
+</Callout>
+
+## Sample MDX Content
+
+Enhance your pages with multi-language code examples using components like `<CodeGroup>`.
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Fetch documentation data
+  const response = await fetch('https://api.antonk.com/spaces/my-space');
+  const space = await response.json();
+  console.log(space);
+  ```
+
+  ```python
+  # Fetch documentation data
+  import requests
+  response = requests.get('https://api.antonk.com/spaces/my-space')
+  space = response.json()
+  print(space)
+  ```
+</CodeGroup>
+
+## Next Steps
+
+Explore more features to level up your documentation.
+
+<Columns cols={3}>
+  <Card title="Customize Themes" icon="palette" href="/configuration">
+    Adjust colors, fonts, and layouts to match your brand.
+  </Card>
+
+  <Card title="Add Authentication" icon="shield" href="/authentication">
+    Secure your spaces with user logins and roles.
+  </Card>
+
+  <Card title="Integrate APIs" icon="zap" href="/introduction">
+    Embed dynamic content and automate updates.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+
+If you encounter errors:
+
+- **Signup email not received?** Check spam folder or resend from [https://antonk.com/login](https://antonk.com/login).
+- **Page not rendering MDX?** Ensure code blocks use three backticks and valid language tags like `javascript`.
+
+</Expandable>

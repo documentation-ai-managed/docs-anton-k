@@ -1,0 +1,111 @@
+---
+title: Introduction to Anton K
+description: Discover Anton K, your default documentation space for organizing and managing project documentation with ease.
+---
+
+## Overview
+
+Anton K provides a centralized hub for your project documentation. You can create, organize, and publish docs using MDX, with built-in support for interactive components, version control, and search. Start building your knowledge base in minutes and scale as your project grows.
+
+<Callout kind="info">
+  Anton K integrates seamlessly with GitHub for versioned docs and supports custom domains for branded experiences.
+</Callout>
+
+## Key Features
+
+Anton K streamlines documentation workflows with powerful tools tailored for developers and teams.
+
+<Columns cols={3}>
+  <Card title="Interactive MDX" icon="code" href="#interactive-mdx">
+    Embed components like tabs, steps, and code groups directly in your docs for engaging guides.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Sync with Git repositories to manage changes, previews, and releases effortlessly.
+  </Card>
+  <Card title="Search & Navigation" icon="search" href="#search-navigation">
+    Full-text search, sidebar navigation, and quick links keep users oriented.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Get your first documentation page live in under 5 minutes.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://app.antonk.com` with your email or GitHub account.
+  </Step>
+  <Step title="Add Repository" icon="git-commit">
+    Connect your GitHub repo containing MDX files.
+  </Step>
+  <Step title="Publish Docs" icon="rocket">
+    Deploy your site with one click. Customize themes and add your brand color (`#3B82F6`).
+  </Step>
+</Steps>
+
+Here's a sample MDX frontmatter for your pages:
+
+<CodeGroup tabs="Default,Custom">
+  ```yaml
+---
+title: My Page
+description: Page description here.
+---
+  ```
+  ```yaml
+---
+title: Advanced Page
+description: Custom docs page.
+brandColor: "#3B82F6"
+---
+  ```
+</CodeGroup>
+
+## Explore by Use Case
+
+Choose your starting point based on your needs.
+
+<Tabs>
+  <Tab title="Teams" icon="users">
+    Collaborate with real-time editing and role-based access.
+    
+    <Image
+      src="https://via.placeholder.com/600x300/3B82F6/FFFFFF?text=Teams+Dashboard"
+      alt="Anton K teams dashboard screenshot"
+      width="600"
+      height="300"
+    />
+  </Tab>
+  <Tab title="Solo Developers" icon="code">
+    Focus on writing with auto-sync and previews.
+    
+    ```javascript
+    // Example: Embed API calls in docs
+    const response = await fetch('https://api.example.com/docs', {
+      headers: { Authorization: `Bearer ${YOUR_API_KEY}` }
+    });
+    ```
+  </Tab>
+</Tabs>
+
+<Expandable title="Advanced Customization" default-open="false">
+  Use environment variables like `{ANTONK_PROJECT_ID}` for dynamic content. Integrate webhooks to `https://your-webhook-url.com/webhook` for CI/CD pipelines.
+</Expandable>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="zap" href="/quickstart">
+    Set up your first project step-by-step.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your docs with API keys and OAuth.
+  </Card>
+  <Card title="Changelog" icon="git-commit" href="/changelog">
+    Stay updated with the latest releases.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Ready to dive in? Head to the [Quickstart](/quickstart) for hands-on setup.
+</Callout>
